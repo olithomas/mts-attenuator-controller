@@ -4,6 +4,7 @@ A script to control the [MTS System Technik SCF-0300 Digital Variable Attenuator
 
 The MTS System Technik Digital Variable Attenuator is a 6-channel (hereafter called 'BTS') digitally controlled variable attenuator that can set RF sttenuation values of betweenm 0 and 93 dB for channels from 400MHz to 2900MHz.
 The LAN version of the attenuato comes fitted with an 'X-Port' Serial-over-LAN interface, which implements the simple serial protocol over TCP sockets. This allows control of the attenuator via a standard IP network.
+
 FUNCTIONAL OVERVIEW:
 --------------------
 The script is able to perform concurrent operations on multiple BTS. Each argument (excluding -q -m and -h) accepts a list of numbers, separated by spaces.
@@ -36,6 +37,7 @@ The script accepts 5 primary arguments and the presence, or not, of these argume
 * -b -a -t -i options - Absolute ramping operation, moves the attenuation values of the BTS' specified in the -b option from the initial values specified in the -i option, the obsolute target values specified in the -a option over the times specified in the -t option.
 
 In a ramping operation, the attenuation value is incremented by one at each time step. The duration of a time step is determined by the total operation time and the difference between initial and target values. All this is calculated automatically by the script leaving the user to only have to specify the parameters as described above.
+
 STUB SERVER:
 ------------
 A stub server is included in the 'server' folder, which allows users to test the script without having a physical MTS attenuator present.
