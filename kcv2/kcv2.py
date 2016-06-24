@@ -150,6 +150,7 @@ USAGE
         # Process arguments
         args = parser.parse_args()
         
+        # If user specified -m or --man option, show the manual page and exit
         if args.man:
             print (program_man_page)
             parser.print_help()
